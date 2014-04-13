@@ -1,0 +1,81 @@
+<html>
+	<head>
+		<title>
+			Socket.io Chat
+		</title>
+		<script src="../socket.io/socket.io.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div align="center" width="100%" >
+			<div id="page" class="background">
+			</div>
+		</div>
+	</body>
+</html>
+
+<script>
+	window.onbeforeunload = function() {
+	    return "Are you sure you want to leave this page?  Your current entries" +
+	        " will be lost.";
+	};
+	$(window).resize(onResize);
+	function onResize() {
+	    if ($(window).width() *0.8 > 700 ) {
+	    	$('#page').width(700);
+	    }
+	    else if ($(window).width()*0.8 > 300 ) {
+	    	$('#page').width($(window).width()*0.8)
+	    }
+	    else $('#page').width(300); 
+	}
+	var socket;
+	var firstconnect = true;
+	var count = 0;
+	var check = false;
+	var title = document.title;
+
+	function onFocus(){
+		check = false;
+	}
+	function onBlur() {
+		check = true;
+	}
+	if (/*@cc_on!@*/false) { // check for Internet Explorer
+		document.onfocusin = onFocus;
+		document.onblurin = onBlur;
+	} else {
+		window.onfocus = onFocus;
+		window.onblur = onBlur;
+	}
+
+	function connect() {
+		if (firstconnect) {
+			socket = io.connect(null);
+
+			
+			socket.on('test', function(message){
+				//$('#messages').prepend('<b>' + client + ' says:<b> '+ message + '<br>');
+				console.log(message.score);
+				
+			});
+
+			firstconnect = false;
+		}
+		else {
+			socket.socket.reconnect();
+		}
+		
+	}
+
+
+	function disconnect(){
+		socket.disconnect();
+	}
+
+
+	onResize();
+	connect();
+	
+</script>

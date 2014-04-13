@@ -1,0 +1,112 @@
+.emoticon {
+	width:25px;
+	height:25px;
+}
+
+.title{
+	font-family:Verdana;
+	font-size:32px;
+	text-align:center;
+	color:#015666;
+}
+.status{
+	text-align:center;
+	font-family:Verdana;
+	font-size:13px;
+}
+
+.message{
+	font-family:Verdana;
+	font-size:13px;
+	text-align:left;
+}
+
+#messages{
+	background-color:#FFFFFF;
+	overflow-y:auto;
+	font-family:Verdana;
+	font-size:12px;
+}
+.button_small {
+	
+	background-color:#79bbff;
+	-webkit-border-top-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+	border-top-left-radius:0px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:0;
+	border:1px solid #469df5;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:10px;
+	font-style:normal;
+	height:20px;
+	width:75px;
+	text-decoration:none;
+	text-align:center;
+}
+.button_small:hover {
+	
+	background-color:#79bbff;
+}.button_small:active {
+	position:relative;
+	top:1px;
+}
+
+.button {
+	background-color:#79bbff;
+	-webkit-border-top-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+	border-top-left-radius:0px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:0;
+	border:1px solid #469df5;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:15px;
+	font-weight:normal;
+	font-style:normal;
+	height:40px;
+	width:100px;
+	text-decoration:none;
+	text-align:center;
+}
+.button:hover {
+	background-color:#79bbff;
+}.button:active {
+	position:relative;
+	top:1px;
+}
+
+.background{
+	border-width:20px;
+	border-color:#FF9640;
+	border-style:solid;
+	border-radius:20px;
+}
+
+#page{
+    position: relative;
+    width: 700px;
+    text-align:left;
+    margin-top:4%;
+    background-color:#FF9640;
+}​
